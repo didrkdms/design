@@ -142,3 +142,37 @@ html, body {
     font-weight: 900;
     line-height: 1.2;
 }
+.reqm h1 {
+    margin: 124px 0 46px 0;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+}
+.reqm ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.reqm ul li {
+    width: 511px;
+    height: 251px;
+    font-size: 30px;
+    color: #ffffff;
+    padding: 152px 0 0 64px;
+    border-radius: 47px;
+    margin: 0 12px 24px 12px;
+}
+.reqm ul li:nth-child(1) {
+    background-image: url(../images/img1.png);
+}
+.reqm ul li:nth-child(2) {
+    background-image: url(../images/img2.png);
+}
+.reqm ul li:nth-child(3) {
+    background-image: url(../images/img3.png);
+}
+.reqm ul li:nth-child(4) {
+    background-image: url(../images/img4.png);
+}
