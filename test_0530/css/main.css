@@ -1,0 +1,81 @@
+@import url(default.css); /* default.css 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/fonts/Pretendard-Bold.woff) format('woff');
+}
+    @font-face{ 
+        font-family: 'Pretendard';
+        font-weight: 300;
+        font-display: swap;
+        src: local('Pretendard Light'), url(../fonts/fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/fonts/Pretendard-Light.woff) format('woff');
+    }
+html, body {
+    /* font-family 사용하는 서체명은 font-face에서 사용한 이름으로 사용, sans-serif는 고딕체라는 의미 */
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px; /* 글자 크기 */
+    color: #3d3d3d; /* 글자 색상 */
+    line-height: 1.5; /* 행간 */
+    font-weight: 300; /* 글자두께 */
+    letter-spacing: 0.02em; /* 자간 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+.wrapper { /* 홈페이지 넓이를 제한하고 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: -0.05em;
+    text-align: center;
+    margin: 120px 0 70px 0;
+}
+.only {
+    background-image: url(../images/bg2.png);
+    background-position: center center; /* 배경정렬 */
+    background-repeat: no-repeat; /* 반복안함 */
+    background-size: cover; /* 영역에 꽉차게 */
+    background: url(../images/only_bg.png) no-repeat center center / cover;
+    /* 배경에 이미지를 넣을때 한번에 선언하는 방법 */
+    height: 729px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+.only h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 289px 0 24px 0;
+}
+.cj .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.cj .txt {
+    width: 570px;
+}
+.cj .txt strong {
+    font-size: 40px;
+    font-weight: 700;
+    color: #006ced;
+}
+.cj .txt h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+}
+.cj .photo img {
+    border-radius: 42px;
+}
+.culture .txt {
+    margin: 124px 131px 0 107px;
+}
+.global .txt {
+    margin: 160px 107px 0 83px;
+}
