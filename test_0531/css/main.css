@@ -124,5 +124,5 @@ html, body {
 /* 마우스를 오버했을때 border를 주고자 한다면 원래 border 있는데 색상만 변경된 것으로 해야함 - 원래는 배경색하고 같은색이다가 오버하면 색상만 변경*/
 .bbs ul li a:hover {
     border: 3px solid #002aff;
-    box-shadow: 10px 15px 20px rgba(230 100 100 0 43 225);
+    box-shadow: 10px 15px 20px rgba(0 43 225);
 }
