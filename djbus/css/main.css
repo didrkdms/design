@@ -216,7 +216,7 @@ header .gnb ul li a:hover {
 }
 /*마우스를 오버 변경되는 요소의 스타일이 정의된 선택자를 그대로 복사해야함 만약 그냥 body라던가 다른 스타일을 상속받은거면 그냥 a에게 스타일을 주면 됨*/
 .promotion .movie .list ul li a:hover .photo img{
-    color: 1px solid #1d1d1d;
+    border: 1px solid #1d1d1d;
     width: calc(100% - 2px);
 }
 .promotion .movie .list ul li a:hover h3 {
