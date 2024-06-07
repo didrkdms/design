@@ -257,7 +257,7 @@ footer .wrapper {
 footer .family {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 20px;
     /* footer .wrapper 기준으로 정렬 */
 }
 footer .family button {
