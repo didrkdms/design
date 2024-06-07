@@ -250,3 +250,20 @@ footer .f_info span {
 footer .copyright {
     color: rgba(255,255,255,0.6);
 }
+footer .family {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    /* footer .wrapper 기준으로 정렬 */
+}
+footer .family button {
+    border: 1px solid rgba(255,255,255,0.5);
+    width: 200px;
+    height: 30px;
+    /* 원래 버튼 태그는 요소가 좌우에 가운데 위아래 가운데 정렬 */
+    display: flex;
+    justify-content: space-between;
+    /* 내부 두 요소를 좌우 끝단에 배치하기 위해서 */
+    align-items: center; /* 위아래 가운데 */
+    padding: 0 19px;
+}
