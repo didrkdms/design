@@ -192,7 +192,7 @@ header .gnb ul li a:hover {
     font-size: 40px;
     font-weight: 700;
     color: #1d1d1d;
-    letter-spacing: 1.2;
+    letter-spacing: -0.03em;
 }
 .tour .list ul {
     display: flex;
