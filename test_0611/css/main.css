@@ -1,0 +1,181 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/*글자의 스타일은 상속받음, 기본글자의 스타일은 모든 탱그를 감싸는 html body에 선언*/
+html, body {
+    font-family: 'pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.2; /*배수 - 글자크기에 1.2배*/
+    color: #3d3d3d;
+    word-break: keep-all;
+}
+/* 홈페이지 전체를 감싸는 요소 - 가로스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px
+}
+/*홈페이지의 넓이를 제한하고 가운데정렬*/
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;/*가운데정렬*/
+}
+@media screen and (max-width:640px){
+    /*640px이하에서만 우선 적용
+    선택자가 동일해야함
+    pc버전 스타일하고 mobile전 스타일이 동시에 적용되는 것이라
+    변경되는 요소만 스타일을 적용*/
+    html, body {
+        font-size: 10px;
+    }
+    #wrap {
+        min-width: 100%/*최소넓이 꽉차게*/
+    }
+    .wrapper {
+        width: auto;/*block요소의 속성대로 알아서주기
+        100%를 주면 margin이 좌우로 20px씩 들어가서
+        실재 넓이가 100% + 40px로 사이즈가 넘치게됨
+        auto로 주면 알아서 여백까지 해서 꽉차게 들어감*/
+        margin: 0 20px;/*좌우에 여백 20px*/
+    }
+}/*media*/
+.eco h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 119px 0 61px 0;
+}
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+.eco ul li {
+    width: 404px;
+}
+.eco ul li a h3 {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 21px 0 11px 0;
+}
+
+@media screen and (max-width:640px) {
+    .eco h2 {
+        font-size: 25px;
+        margin: 46px 0 32px 0;
+    }
+    .eco ul li {
+        width: calc(50% - 8px);
+        /*두개의 li가 반반들어가는데 사이에 여백이 16px 고정으로 들어감
+        (100% / li갯수) - (사이야백으 총합) / (li갯수-1)
+        (100% / 2) - (16px / 2)
+        50% - 8px 
+        퍼센트와 px 두 단위를 동시에 계산하는 계산식
+        calc(50% - 8px) - 반드시 -, + 같은 기호 앞뒤로 여백이 있어야함*/
+    }
+    .eco ul li:last-child {/*3개 나오다가 2개만 나옴*/
+        display: none;
+    }
+    /*글자는 넓이가 부족하면 줄이 바뀜 - 하지만 이미지는 
+    넓이를 주지 않으면 넓이가 바뀌지 않음
+    -아무리 이미지를 감싸는 영역의 넓이가 줄어도
+    이미지는 삐져나옴*/
+    .eco ul li a .photo img {
+        width: 100%;
+        /*넓이만 줌 - 높이는 비율에 맞게 알아서 들어감
+        (넓이와 높이를 동시에 선언하면 비율에 맞지 않게 깨질수도 있음)
+        100% - 이미지를 감싸는 요소의 넓이의 100%
+        ==> 만약 이미지의 사이즈가 더 작다면 늘어남*/
+    }
+    .eco ul li a h3 {
+        font-size: 20px;
+        font-weight: 900;
+        margin: 21px 0 11px 0;
+    }
+}/*media*/
+
+.pure {
+    background: url(../images/pure_bg.png) no-repeat center center / cover;
+    color: #fff;
+    margin: 154px 0 79px 0;
+    height: 700px;
+    text-align: center;
+}
+.pure h2 {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.2;
+    padding: 138px 0 25px 0;
+}
+.pure ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0 0 0;
+}
+.pure ul li {
+    width: 297px;
+    height: 331px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+@media screen and (max-width:640px) {
+    .pure {
+        margin: 85px 0 0 0;
+        padding: 0 0 32px 0;/*모바일에서 높이는 계속 바뀜
+        높이를 지정해주는 것이 아니라 콘텐츠 하단에 */
+        height: auto;/*기존에 선언된 높이값을 해제하는 방법
+        auto로 주변 내부 콘텐츠의 길이대로 늘어남 (원래대로)*/
+    }
+    .pure h2 {
+        font-size: 30px;
+        padding: 46px 0 16px 0;
+    }
+    .pure ul {
+        flex-wrap: wrap;/*여러줄 허용*/
+        gap: 16px;/*사이여백*/
+        margin: 40px 0 0 0;
+    }
+    .pure ul li {
+        width: calc(50% - 8px);
+        height: 150px;
+    }
+}/*media*/
+.tech {
+    margin: 79px 0 0 0;
+}
+
+.tech .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.tech strong {
+    color:#FF0C0C;
+    font-size: 20px;
+    margin: 115px 0 11px 0;
+    display: block; /*margin값 적용하기 위해서*/
+}
+.tech h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.2;
+
+}
+.tech p {
+    width: 648px;
+    /*영역을 제한해서 글자의 줄바꿈을 구현*/
+    margin: 25px 0 54px 0;
+}
+@media screen and (max-width:640px) {
+    .tech .wrapper {
+        display :block; /*flex를 해제하기 위해서는 display의 다른 속성을 선언
+        inlinem inline-block, none 제일 만만한게 block*/
+    }
+    .tech p {
+        width: auto;/* 넓이 해제 */
+    }
+    .tech .photo img {
+        width: 100%;
+    }
+}
