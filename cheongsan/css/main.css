@@ -377,6 +377,24 @@ footer .f_nav ul {
 }
 footer .f_nav ul li {
     margin: 0 46px 32px 0;
+    position: relative/*::after 정렬의 기준*/;
+}
+footer .f_nav ul li::before {
+    content: "시작";
+}
+footer .f_nav ul li::after {
+    content: "";/*가상요소 before와 after사용하실때는 반드시 content 필요
+    지우면 나타나지 않음*/
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+    display: block;
+    position: absolute;/*각각의 li를 기준으로 정렬*/
+    right: -24px;
+    top: 4px;
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
 }
 footer .f_info {
     display: flex;
