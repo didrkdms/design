@@ -311,12 +311,87 @@ header .gnb ul li a:hover {
     color: #fff;
     margin: 39px 0 31px 0
 }
+.community .news ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.community .news ul li:first-child {
+    border-top: 0;
+}
 .community .news ul li a {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 0 13px 0;
+    color: #fff;
+    padding: 8px 0 8px 0;
+} 
+.community .news ul li a:hover strong {
+    font-weight: 700;
+}
+.community .link {
+    width: 404px;/*li한개의 넓이x2 + gap*/
+    margin: 123px 0 0 24px;
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap;/*두줄허용*/
+    gap: 24px;/*li사이의 여백*/
+}
+.community .link ul li {
+    width: 190px;
+    background-color: rgba(75,95,109,0.66);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+.community .link ul li a {
+    display: block;
+    height: 171px;
+    padding: 32px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    background-position: right 30px bottom 34px;
+    background-repeat: no-repeat;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/community_ico1.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/community_ico2.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/community_ico3.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/community_ico4.svg);
 }
 footer {
-    margin-top: 500px;
+    padding: 45px 0 90px 0;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 46px 32px 0;
+}
+footer .f_info {
+    display: flex;
+    margin: 0 0 22px 0;
+    gap: 46px;
+}
+footer .copyright {
+    color: #666666;
+}
+footer .familysite button {
+    width: 190px;
+    height: 41px;
+    border: 1px solid #9F9F9F;
+    border-radius: 10px;
+    padding: 0 15px;
+    text-align: left;/*버튼의 기본은 가운데 - 왼쪽정렬로 변경*/
+    background: url(../images/ico.svg) no-repeat right 23px center;
 }
