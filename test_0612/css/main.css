@@ -174,6 +174,9 @@
         font-size: 30px;
         margin: 7px 0 4px 0 ;
     }
+    .story .txt p br {
+        display: none;
+    }
     .story .txt .more {
         margin: 20px 0 0 0;
         
@@ -203,4 +206,105 @@
         width: 100%;/*photo 넓이의 100%*/
     }
 }
+.news h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 146px 0 39px 0;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 297px;
+    border: 1px solid #ccc;
+}
+.news ul li a {
+    padding: 32px 24px 35px 24px;
+    display: block;
+}
+.news ul li a strong {
+    color: #000F98;
+}
+.news ul li a h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 9px 0 11px 0;
 
+    /*1줄로 제한하기 - 주의사항 padding 절대 금지*/
+    white-space: nowrap;/*줄바꿈 금지*/
+    overflow: hidden;/*영역에서 넘치는 부분 자르기 - 이 요소가 block 요소여야함*/
+    text-overflow: ellipsis;/*글자가 마지막에 ...추가 (글자가 잘리는 현상 막기) - 주의사항 ...수정 불가능*/
+}
+.news ul li a span {
+    margin: 17px 0 0 0;
+    display: block;
+}
+.news ul li a p {
+    /*3줄로 제한 - 주의사항 padding 절대 금지*/
+    line-height: 1.2;
+    height: 3.6em;/*행간 X 줄수 = 단위는 em*/
+    overflow: hidden;
+}
+@media screen and (max-width:640px){
+    .news h2 {
+        font-size: 30px;
+        margin: 88px 0 15px 0;
+    }
+    .news ul {
+        /*display: flex;
+        justify-content: space-between;
+            2개씩 나오게 할거라 유지
+        */
+        flex-wrap: wrap/*줄바꿈 허용*/;
+    }
+    .news ul li {
+        width: calc(50% - 8px);
+        margin-bottom: 16px;
+    }
+    .news ul li a {
+        padding: 32px 24px 35px 24px;
+        display: block;
+    }
+    .news ul li a strong {
+        color: #000F98;
+    }
+    .news ul li a h3 {
+        color: #1d1d1d;
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 9px 0 11px 0;
+    
+        /*1줄로 제한하기 - 주의사항 padding 절대 금지*/
+        white-space: nowrap;/*줄바꿈 금지*/
+        overflow: hidden;/*영역에서 넘치는 부분 자르기 - 이 요소가 block 요소여야함*/
+        text-overflow: ellipsis;/*글자가 마지막에 ...추가 (글자가 잘리는 현상 막기) - 주의사항 ...수정 불가능*/
+    }
+    .news ul li a span {
+        margin: 17px 0 0 0;
+        display: block;
+    }
+    .news ul li a p {
+        /*3줄로 제한 - 주의사항 padding 절대 금지*/
+        line-height: 1.2;
+        height: 3.6em;/*행간 X 줄수 = 단위는 em*/
+        overflow: hidden;
+    }
+}/*media*/
+@media screen and (max-width:500px){
+    .news ul {
+        display: block;
+        /*flex-wrap:wrap - 줄바꿈 금지
+        flex-direction: colum - 세트로 배치 (gap 유지)*/
+    }
+    .news ul li {
+        width: auto;
+    }
+}/*media*/
+.container {
+    margin: 0 0 150px 0;
+    flex-wrap: wrap;
+}
