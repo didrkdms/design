@@ -23,6 +23,86 @@ html에서 gmarket 서체를 써야하는 htnl요소에
     font-weight: 700;
     line-height: 1.2;
 }
+header {
+    position:absolute;/*bosy를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    /*position을 가지고 있는 요소들 중에서
+    제일 높은 숫자를 줘서 위에 배치
+    잘못하면 메뉴 안눌림*/
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 12px 0 0 0;
+}
+header .gnb .gnb_open {
+    /*모바일에서만 나타남 - pc에서는 숨김*/
+    display: none;
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul li a {
+    padding: 38px 49px;
+    display: block;
+    font-size: 22px;
+    position: relative;/*after 정렬의 기준*/
+}
+header .gnb .gnb_wrap ul li a::after {
+    position: absolute;/*a를 기준으로 배치*/
+    right: 0;
+    top: 47%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    content: "";/*after를 보이게 하는값*/
+}
+/*마지막 li의 a의 after 선택자를 숨김*/
+header .gnb .gnb_wrap ul li:last-child a::after {
+    display: none;
+}
+@media screen and (max-width:640px){
+    header {
+        height: 50px;
+        border-bottom: 0;
+    }
+    header .logo {
+        margin: 10px 0 0 0;
+    }
+    header .logo img {
+        width: 62px;
+        /*이미지태그로 코딩한 요소는 사이즈가 변경되면
+        반드시 css에서 img태그를 불러서 스타일을 줘야함
+        감싸는 요소에 줘도 적용안됨
+        이미지는 넓이면 높이는 알아서 조정됨*/
+    }
+    header .gnb .gnb_open {
+        /*모바일에서 나타남
+        - 이미 header에 position값이 존재함 - header를 기준으로 정렬*/
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 50px;
+        /*button의 사이즈를 크게 줘서 잘 눌리게 하려고*/
+        font-size: 0;
+        line-height: 0;/*글자 숨기기*/
+        background: url(../images/gnb_open.svg) no-repeat center center;
+    }
+    header .gnb .gnb_wrap {
+        display: none /*메뉴는 열기 버튼을 클릭했을때만 나옴*/;
+    } 
+}
 .visual {
     background: url(../images/visual_bg.png) no-repeat center center;
     color: #fff;
@@ -35,4 +115,47 @@ html에서 gmarket 서체를 써야하는 htnl요소에
 }
 .visual h2 {
     font-size: 45px;
+}
+.visual em {
+    font-size: 45px;
+}
+@media screen and (max-width:640px){
+    .visual {
+        height: auto;/*높이는 콘텐츠의 길에 맞춰 알아서*/
+        padding: 216px 0 46px 0;
+    }
+    .visual strong {
+        display: none
+    }
+    .visual h2 {
+        font-size: 20px;
+    }
+    .visual em {
+        font-size: 20px;
+    } 
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.biz .subject {
+    position: sticky;
+    top: 20px;
+}
+.biz .subject strong {
+    color: #1456AC;
+}
+.biz .subject h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    margin: 15px 0;
+}
+.biz .list {
+    width: 500px;
+    height: 1500px;
+    background-color: #1456AC;
+}
+footer {
+    margin-top: 100px;
 }
