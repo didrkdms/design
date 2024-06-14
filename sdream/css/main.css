@@ -1,0 +1,38 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/*폰트2개...제목에는 gmarket / 본문 pretendard 
+bosy에는 본문 서체 적용.
+제목 서체를 적용하는 방법
+1.css에서 해당 요소를 모두 선택해서 .biz h2 이렇게 각각 불러서
+gmarket 서체 적용 (font-family:gmarket을 계속 선언)
+2.css를 하나를 만들어둠
+예를들어 .tit 이라고...
+html에서 gmarket 서체를 써야하는 htnl요소에
+<section class="biz">
+    <h2 class="tit"><h2> <!--필요한 곳에 class명을 주는 방식>
+</section>*/
+.tit {
+    font-family: 'GmarketSans', sans-serif;/*sans-serif 고딕*/
+    font-weight: 500;
+    line-height: 1.2;
+}
+.tit_b {
+    font-family: 'GmarketSans', sans-serif;/*sans-serif 고딕*/
+    font-weight: 700;
+    line-height: 1.2;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center;
+    color: #fff;
+    height: 800px;
+}
+.visual strong {
+    display: block;
+    padding: 575px 0 0 0;
+    font-size: 20px
+}
+.visual h2 {
+    font-size: 45px;
+}
