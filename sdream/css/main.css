@@ -498,7 +498,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                 }
                 .news .more::after {
                     position: absolute;
-                    right: 258px;
+                    right: 168px;
                     top: 8px;
                     width: 13px;
                     height: 13px;
@@ -681,7 +681,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         position:relative;/*absolute 해제*/
         right: auto;/*해제*/
         top: auto;
-        margin: 30px 0 0 230px;
+        margin: 30px 0 0 0;
     }
     .webzine .more a {
         display: inline-block;
