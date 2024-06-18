@@ -24,7 +24,7 @@ html에서 gmarket 서체를 써야하는 htnl요소에
     line-height: 1.2;
 }
 header {
-    position:absolute;/*bosy를 기준으로 정렬*/
+    position:absolute;/*body를 기준으로 정렬*/
     left: 0;
     top: 0;
     z-index: 100;
