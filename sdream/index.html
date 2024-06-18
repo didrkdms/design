@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <!--jquary 라이브러리, jquary를 돌아가게 하는 값-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
     <title>삼성꿈장학재단</title>
 </head>
 <body>
@@ -146,7 +149,7 @@
                             <a href="#n">
                                 <div class="photo"><img src="images/webzine1.png" alt="행사 사진"></div>
                                 <strong class="tit">글로벌 국외장학사업</strong>
-                                <h3 class="tit">제3회 한국초청연수 Global Dream Workshop 개최 협력과</h3>
+                                <h3 class="tit">제3회 한국초청연수 Global Dream Workshop 개최</h3>
                             </a>
                         </li>
                         <li>
@@ -160,7 +163,7 @@
                             <a href="#n">
                                 <div class="photo"><img src="images/webzine3.png" alt="행사 사진"></div>
                                 <strong class="tit">배움터 교육지원사업</strong>
-                                <h3 class="tit">함께하면 더 멀리 나아갈 수 있으니까! 2024 배움터 교사 아카데미</h3>
+                                <h3 class="tit">함께하면 더 멀리 나아갈 수 있으니까! 2024 배움터 교사</h3>
                             </a>
                         </li>
                         <li>
@@ -176,10 +179,43 @@
             </div>
         </section>
         <section class="introduce">
-            <div class="wrapper"></div>
+            <div class="intro_left">
+                <a href="#n">
+                    <h2 class="tit_b">재단소개</h2>
+                    <p class="tit">개인, 지역, 계층 간 교육격차를 해소하고 사회통합 및 국가발전에 기여하기 위해 설립되었습니다.</p>
+                    <span class="more">재단소개 바로가기</span>
+                </a>
+            </div>
+            <div class="intro_right">
+                <div class="inner">
+                    <a href="#n">
+                        <h2 class="tit_b">결산서류</h2>
+                        <p class="tit">삼성꿈장학재단의 결산서류와 기부금 내역을<br> 공시합니다.</p>
+                        <span class="more">재단소개 바로가기</span>
+                    </a>
+                </div>
+            </div>
         </section>
         <footer>
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <!--눌러서 기능을 작동시키는 요소 button
+                a는 눌러서 다른 페이지 이동-->
+                <div class="top"><button>TOP</button></div>
+                <div class="f_nav">
+                    <ul>
+                        <li><a href="#n">이용약관</a></li>
+                        <li><a href="#n">이메일 무단 수집거부</a></li>
+                        <li><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">교육부 홈페이지</a></li>
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <address>(우)04323 서울특별시 용산구 후암로 107 게이트웨이타워 20층</address>
+                    <span>TEL 02-727-5400</span>
+                    <span>FAX 02-727-5409</span>
+                </div>
+                <div class="copyright">ⓒ Samsung Dream Scholarship Foundation</div>
+            </div>
         </footer>
     </div>
 </body>
