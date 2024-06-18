@@ -498,7 +498,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                 }
                 .news .more::after {
                     position: absolute;
-                    right: 130px;
+                    right: 258px;
                     top: 8px;
                     width: 13px;
                     height: 13px;
@@ -553,7 +553,163 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     height: 100%;
     object-fit: cover;
     /*감싸는 요소에 꽉맞게 리사이즈 - 위아래/좌우에 가운데 이미지 정렬*/
+    transition: 0.5s;/*앞으로 img에 어떤 변화가 있으면 그걸 부드럽개 처리
+    1. 마우스 오버
+    2. 클래스추가
+    3. 브라우저 사이즈가 바뀌어서 반응형 코드 적용
+    */
 }
+.webzine .list ul li a strong {
+    color: #1456AC;
+    display: block;/*margin 적용을 위한 값*/
+    margin: 26px 0 0 18px;
+}
+.webzine .list ul li a h3 {
+    font-size: 17px;
+    margin: 0 24px 32px 18px;
+}
+/*마우스를 올렸을때*/
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);/*이미지확대*/
+}
+.webzine .list ul li a:hover {
+    border-color: #1456AC;
+    background-color: #1456AC;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    color: #fff;
+}
+.webzine .list ul li a:hover strong {
+    color: #fff;
+}
+
+.webzine .wrapper {
+    position: relative;/*more 정렬의 기준*/
+}
+.webzine .more {
+    position: absolute;/*wrapper를 기준으로 정렬*/
+    right: 0;
+    top: 30px;
+}
+.webzine .more a {
+    padding: 6px 49px 7px 13px;
+    border: 1px solid #666;
+    border-radius: 17px;/*높이의 절반*/
+    color: #666;
+    display: block;/*padding과 border 적용을 위한 값*/
+    position: relative;/*after 정렬의 기준*/
+}
+.webzine .more a::after {
+    position: absolute;/*a를 기준으로 정렬*/
+    right: 13px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/news_more.svg) no-repeat center center / contain;
+    content: "";/*after를 보이게 하는 값*/
+
+}
+.webzine .more a:hover {
+    border-color: #1456AC;
+    background-color: #1456AC;
+    color: #fff;
+
+}
+.webzine .more a:hover::after {
+    background-image: url(../images/news_more2.svg);
+}
+@media screen and (max-width:640px) {
+    .webzine .subject strong {
+        margin: 50px 0 0 0;
+    }
+    .webzine .subject h2 {
+        font-size: 30px;
+        margin: 0 0 34px 0;
+    }
+    .webzine .list ul li {
+        width:100%;
+    }
+    .webzine .list ul li:nth-child(2),
+    .webzine .list ul li:nth-child(3),
+    .webzine .list ul li:nth-child(4) {
+        display: none;
+        /*해당 태그가 존재하지 않았던 것 처럼 사라짐
+        공간 차지하지 않음*/
+    }
+
+    .webzine .list ul li a {
+        height: auto;
+        border-bottom: 34px;
+        border-radius: 0;
+        border: 0;
+    }
+    /*계시판에서 이미지를 가져오는 경우
+    이미지의 사이즈가 다양함.
+    이를 디자인한대로 동일한 사이즈로 리사이즈하는 방법
+    1. 이미지를 감싸는 요소가 넓이와 높이를 가지고 있어야함.
+        overflow:hidden;
+    2. 이미지에는 width:100%, height:100%, object-fit:cover를 줘야함  */
+    .webzine .list ul li a .photo {
+        height: 317px;/*block요소이기때문에 넓이는 안줘도 됨*/
+    }
+    .webzine .list ul li a strong {
+        display: block;/*margin 적용을 위한 값*/
+        margin: 24px 0 0 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .webzine .list ul li a h3 {
+        font-size: 13px;
+        margin: 0 83px 34px 12px;
+        line-height: 1.3;
+        height: 2.6em;
+        overflow: hidden;
+    }
+    /*마우스를 올렸을때*/
+    .webzine .list ul li a:hover .photo img {
+        transform: scale3d(1.2, 1.2, 1);/*이미지확대*/
+    }
+    .webzine .list ul li a:hover {
+        background-color: transparent;/*투명*/
+        box-shadow: none;
+        color: #3d3d3d;
+    }
+    .webzine .list ul li a:hover strong {
+        color: #1456AC;
+    }
+    .webzine .more {
+        position:relative;/*absolute 해제*/
+        right: auto;/*해제*/
+        top: auto;
+        margin: 30px 0 0 0;
+    }
+    .webzine .more a {
+        display: inline-block;
+        padding: 7px 40px 7px 12px;
+        border: 1px solid #666;
+        border-radius: 17px;/*높이의 절반*/
+        color: #666;
+        position: relative;/*after 정렬의 기준*/
+    }
+    .webzine .more a::after {
+        right: 13px;
+        top: 7px;
+        width: 13px;
+        height: 13px;
+        background: url(../images/news_more.svg) no-repeat center center / contain;
+        content: "";/*after를 보이게 하는 값*/
+    
+    }
+    .webzine .more a:hover {
+        border-color: #1456AC;
+        background-color: #1456AC;
+        color: #fff;
+    
+    }
+    .webzine .more a:hover::after {
+        background-image: url(../images/news_more2.svg);
+    }
+}/*media*/
 footer {
     margin-top: 800px;
 }
