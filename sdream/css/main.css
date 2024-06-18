@@ -421,7 +421,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     border: 1px solid #666;
     position: relative;
 }
-.news .more::after {
+.news .more a::after {
     position: absolute;
     right: 12px;
     top: 8px;
@@ -496,12 +496,14 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                     border: 1px solid #666;
                     position: relative;
                 }
-                .news .more::after {
+                .news .more a::after {
                     position: absolute;
-                    right: 140px;
-                    top: 8px;
+                    right: 13px;
+                    top: 7px;
                     width: 13px;
                     height: 13px;
+                    background: url(../images/news_more.svg) no-repeat center center / contain;
+                    content: "";
                 }
                 .news .more a:hover {
                     background-color: #1456AC;
@@ -682,9 +684,12 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         right: auto;/*해제*/
         top: auto;
         margin: 30px 0 0 0;
+        text-align: center;
     }
     .webzine .more a {
         display: inline-block;
+        right: 0;
+        top: 0;
         padding: 7px 40px 7px 12px;
         border: 1px solid #666;
         border-radius: 17px;/*높이의 절반*/
@@ -692,6 +697,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         position: relative;/*after 정렬의 기준*/
     }
     .webzine .more a::after {
+        position: absolute;
         right: 13px;
         top: 7px;
         width: 13px;
@@ -710,6 +716,205 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         background-image: url(../images/news_more2.svg);
     }
 }/*media*/
-footer {
-    margin-top: 800px;
+.introduce {
+    display: flex;
+    margin: 114px 0 0 0;
 }
+.introduce .intro_left {
+    width: 50%;
+    background: url(../images/introduce1.png) no-repeat center center / cover;
+    display: flex;/**/
+    justify-content: flex-end;
+}
+.introduce .intro_right {
+    width: 50%;
+    background: url(../images/introduce2.png) no-repeat center center / cover;
+}
+.introduce a {
+    height: 274px;
+    width: 630px;
+    display: block;/*height을 주기 위한 값*/
+    color: #fff;
+    padding: 0 0 0 164px;
+}
+.introduce a h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 56px 0 26px 0;
+}
+.introduce a p {
+    margin: 0 86px 8px 0 ;
+}
+.introduce a .more {
+    display: inline-block;
+    padding-right: 25px;
+    position: relative;
+    color: rgba(255,255,255,0.8);
+}
+.introduce a .more::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/intro_ico.svg) no-repeat center center / contain;
+    content: "";
+}
+@media screen and (max-width:640px) {
+    .introduce {
+        display: block;
+        margin: 44px 0 0 0;
+    }
+    .introduce .intro_left {
+        width: auto;
+        background: url(../images/introduce1.png) no-repeat center center / cover;
+        display: block;
+    }
+    .introduce .intro_right {
+        width: auto;
+        background: url(../images/introduce2.png) no-repeat center center / cover;
+    }
+    .introduce a {
+        height: auto;
+        width: auto;
+        color: #fff;
+        padding: 48px 0 22px 22px;
+    }
+    .introduce a h2 {
+        font-size: 30px;
+        margin: 0 0 7px 0;
+    }
+    .introduce a p {
+        margin: 0 0 10px 0;
+        
+    }
+    .introduce a .more {
+        display: inline-block;
+        padding-right: 17px;
+        position: relative;
+        color: rgba(255,255,255,0.8);
+    }
+    .introduce a .more::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        background: url(../images/intro_ico.svg) no-repeat center center / contain;
+        content: "";
+    }
+}
+
+footer {
+    background-color: #2D2D2D;
+    padding: 90px 0 100px 0;
+    color: rgba(255,255,255,0.8);
+}
+footer .wrapper {
+    position: relative;/*top 정렬의 기준*/
+}
+footer .top {
+    position: absolute;/*wrapper 기준으로 정렬*/
+    right: 0;
+    top: 0;
+}
+footer .top button {
+    width: 77px;
+    height: 77px;
+    border: 1px solid #fff;
+    border-radius: 50%;/*동그라미*/
+    padding: 25px 0 0 0;
+    position: relative;/*before 정렬의 기준*/
+}
+footer .top button::before {
+    position: absolute;/*button을 기준으로 정렬*/
+    left: 23px;
+    top: 10px;
+    width: 29px;
+    height: 29px;
+    background: url(../images/top_ico.svg) no-repeat center center / contain;
+    content: "";/*before를 보이게 하는 값*/
+}
+footer .f_nav ul{
+    display: flex;
+    gap: 36px;
+}
+footer .f_nav ul li {
+    position: relative;/*after 정렬의 기준*/
+}
+footer .f_nav ul li::after {
+    position: absolute;/*li 기준으로 정렬*/
+    right: -15px;
+    top: 1px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin: 40px 0 0 0;
+    display: flex;
+    gap: 36px;
+}
+footer .copyright {
+    margin: 16px 0 0 0;
+    color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:640px) {
+    footer {
+        padding: 21px 0 45px 0;
+    }
+    footer .top {
+        position: relative;/*absolute 해제*/
+        right: auto;
+        top: auto;
+        text-align: right;
+        margin: 0 0 39px 0;
+    }
+    footer .top button {
+        width: 59px;
+        height: 59px;
+        border: 1px solid #fff;
+        border-radius: 50%;/*동그라미*/
+        padding: 20px 0 0 0;
+    }
+    footer .top button::before {
+        left: 17px;
+        top: 8px;
+        width: 22px;
+        height: 22px;
+    }
+    footer .f_nav ul{
+        flex-wrap: wrap/*여러줄 허용*/;
+        gap: 0;
+    }
+    footer .f_nav ul li {
+        margin: 0 14px 7px 0;
+    }
+    footer .f_nav ul li::after {
+        position: absolute;/*li 기준으로 정렬*/
+        right: -6px;
+        top: 3px;
+        width: 1px;
+        height: 7px;
+    }
+    footer .f_nav ul li:last-child::after {
+        display: none;
+    }
+    footer .f_info {
+        margin: 20px 0 0 0;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    footer .f_info .address,
+    footer .f_info span {
+        margin: 17px 0 6px 0;
+    }
+    footer .copyright {
+        margin: 16px 0 0 0;
+        color: rgba(255,255,255,0.6);
+    }
+}/*media*/
