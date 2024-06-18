@@ -681,7 +681,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         position:relative;/*absolute 해제*/
         right: auto;/*해제*/
         top: auto;
-        margin: 30px 0 0 0;
+        margin: 30px 0 0 230px;
     }
     .webzine .more a {
         display: inline-block;
