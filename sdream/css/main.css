@@ -498,7 +498,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
                 }
                 .news .more::after {
                     position: absolute;
-                    right: 168px;
+                    right: 140px;
                     top: 8px;
                     width: 13px;
                     height: 13px;
