@@ -208,7 +208,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 @media screen and (max-width:640px){
 
@@ -219,3 +218,159 @@
 }
 .popup .swiper { height:312px } /* 팝업의 높이가 됨 */
 .popupp .swiper-slide img { display:block; width:100%; height:100%; object-fit:cover; } /* 팝업 안에 이미지를 넣었다면 이미지를 꽉차게 나타나게 하기 위해서 해당 스타일을 넣어줌 object-fit 상세설명 */
+
+.visual {
+    margin: 100px 0;
+    position: relative;/*팝업을 감싸는 요소는 position:relative*/
+}
+.visual ul li {
+    height: 800px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visual_bg1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visual_bg2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/biz1.png);
+}
+.visual ul li h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 233px 0 0 0;
+}
+.visual ul li p {
+    font-size: 20px;
+}
+.visual .btn_prev,
+.visual .btn_next {
+    position: absolute;/*swiper를 기준으로 정렬*/
+    top: 400px;
+    z-index: 10;/*swiper아네는 position값이 많이 적용함
+    position끼리는 서로 겹침
+    그래서 더 위에 배치하려면 z-index 위아래값 (층수)
+    숫자가 높은게 더 위에 배치*/
+}
+.visual .btn_prev {
+    left: 31px;
+    left: 1%;
+}
+.visual .btn_next {
+    right: 31px;
+    right: 1%;
+}
+.visual .btn_prev i,
+.visual .btn_next i {
+    font-size: 100px;/*아이콘크기*/
+    color: rgba(255,255,255,0.5);/*아이콘색상*/
+    font-weight: 100;
+}
+.visual .btn_wrap {
+    /*swiper를 기준으로 정렬*/
+    position: absolute;
+    left: 0;
+    bottom: 32px;
+    z-index: 10;
+    width: 100%;/*기준이되는 swiper와 넓이가 같아짐*/
+    display: flex;/* 안에 있는 요소 좌우 나란히*/
+    justify-content: center;
+    /*해당 요소의 넓이에서 가운데*/
+    align-items: center;/*좌우로 배치된 요소끼리 위아래 가운데 정렬*/
+}
+.visual .btn_wrap .paging {
+    width: auto;
+    /*swiper에서 paging에 넓이 100%를 줌*/
+}
+/*기본 스타일*/
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    opacity: 1;
+    border: 1px solid #fff;
+
+}
+/*현재 선택된 동그라미*/
+.visual .btn_wrap .paging .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.visual .btn_wrap button i {
+    color: #fff;/*아이콘색상*/
+    font-size: 24px;/*아이콘크기*/
+    font-weight: 100;/*아이콘 두께*/
+}
+.visual .stop, 
+.visual .play{
+    
+}
+@media screen and (max-width:640px){
+    .visual ul li {
+        height: 424px;
+    }
+    .visual ul li h2 {
+        font-size: 25px;
+        margin: 139px 0 0 0;
+    }
+    .visual ul li p {
+        font-size: 13px;
+    }
+    .visual .btn_prev,
+    .visual .btn_next {
+        display: none;
+    }
+    .visual .btn_wrap {
+        /*swiper를 기준으로 정렬*/
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+    }
+    /*기본 스타일*/
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        width: 13px;
+        height: 13px;
+    
+    }
+    .visual .btn_wrap button i {
+        font-size: 19px;/*아이콘크기*/
+    }
+}
+.book {
+    margin: 100px 0;
+}
+.book ul li {
+    width: 297px;
+}
+.book ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.book ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:640px){
+    .book ul li {
+        width: 152px;
+    }
+}/*media*/
+
+.sns {
+    margin: 100px 0;
+}
+.sns ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.sns ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
