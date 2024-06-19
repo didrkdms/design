@@ -313,10 +313,9 @@
     font-size: 24px;/*아이콘크기*/
     font-weight: 100;/*아이콘 두께*/
 }
-.visual .stop, 
-.visual .play{
-    
-}
+.visual .stop {}
+.visual .play {}
+
 @media screen and (max-width:640px){
     .visual ul li {
         height: 424px;
