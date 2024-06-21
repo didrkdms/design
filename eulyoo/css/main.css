@@ -243,6 +243,86 @@
         }
     
 }/*mesia*/
+
+.interview {
+    background-color: #EDEDED;
+    margin: 105px 0 0 0;
+    padding: 64px 0 121px 0;
+}
+.interview .wrapper {
+    position: relative;/*more 정렬의 기준*/
+}
+.interview .tit {
+    text-align: center;
+    margin: 0 0 139px 0;
+}
+.interview .tit h2 {
+    font-family: "Eulyoo1945";
+    font-size: 50px;
+    color: #1d1d1d;
+    margin: 0 0 14px 0;
+}
+.interview .more {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.interview .more a {
+    padding: 13px 81px 13px 17px;
+    border: 1px solid #999;
+    display: inline-block;
+    color: #666;
+    position: relative;/*after 정렬의 기준*/
+}
+.interview .more a::after {
+    position: absolute;/*a를 기준으로 정렬*/
+    right: 22px;
+    top: 13px;
+    width: 10px;
+    height: 19px; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='19' viewBox='0 0 10 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.44956 9.50156L0.232489 1.35608C0.0753948 1.20054 -0.00208734 1.0135 4.27441e-05 0.794964C0.00199532 0.576252 0.0815183 0.389124 0.238612 0.233579C0.395529 0.0778594 0.584308 0 0.804949 0C1.02541 0 1.21419 0.0778594 1.37129 0.233579L9.50449 8.30173C9.67649 8.47223 9.80208 8.66235 9.88125 8.87208C9.96042 9.082 10 9.29182 10 9.50156C10 9.7113 9.96042 9.92113 9.88125 10.131C9.80208 10.3408 9.67649 10.5309 9.50449 10.7014L1.3649 18.7695C1.20798 18.9253 1.02027 19.0021 0.801754 19C0.583243 18.998 0.395529 18.9192 0.238612 18.7635C0.0815183 18.6079 0.00297204 18.4208 0.00297204 18.2021C0.00297204 17.9836 0.0815183 17.7964 0.238612 17.6407L8.44956 9.50156Z' fill='%23666666'/%3E%3C/svg%3E ");
+    content: "";
+}
+.interview .more a:hover {
+    border-color: #2C2C2C;
+    background-color: #2C2C2C;
+    color: #fff;
+}
+.interview .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='19' viewBox='0 0 10 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.44956 9.50156L0.232489 1.35608C0.0753948 1.20054 -0.00208734 1.0135 4.27441e-05 0.794964C0.00199532 0.576252 0.0815183 0.389123 0.238612 0.233579C0.395529 0.0778594 0.584308 0 0.804949 0C1.02541 0 1.21419 0.0778594 1.37129 0.233579L9.50449 8.30173C9.67649 8.47223 9.80208 8.66235 9.88125 8.87208C9.96042 9.082 10 9.29182 10 9.50156C10 9.7113 9.96042 9.92113 9.88125 10.131C9.80208 10.3408 9.67649 10.5309 9.50449 10.7014L1.3649 18.7695C1.20798 18.9253 1.02027 19.0021 0.801754 19C0.583243 18.998 0.395529 18.9192 0.238612 18.7635C0.0815183 18.6079 0.00297204 18.4208 0.00297204 18.2021C0.00297204 17.9836 0.0815183 17.7964 0.238612 17.6407L8.44956 9.50156Z' fill='white'/%3E%3C/svg%3E ");
+}
+
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+}
+/*디자인상 무조건 두번쨰 요소에 적용되는 스타일*/
+.interview .list ul li:nth-child(2) {
+    margin-top: 52px;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0;/*이미지 하단 여백 삭제*/
+    line-height: 0;
+    border-radius: 60px 0 60px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 60px 0 60px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*감싸는 요소 photo 영역에 이미지 꽉채우기*/
+    filter: grayscale(100%);
+}
 footer {
     margin: 200px 0 0 0;
 }
