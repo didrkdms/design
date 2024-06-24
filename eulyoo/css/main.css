@@ -248,6 +248,7 @@
     background-color: #EDEDED;
     margin: 105px 0 0 0;
     padding: 64px 0 121px 0;
+    height: 800px;
 }
 .interview .wrapper {
     position: relative;/*more 정렬의 기준*/
