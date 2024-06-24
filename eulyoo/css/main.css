@@ -414,7 +414,7 @@ header.fixed .tnb .search::before {
     background-color: #EDEDED;
     margin: 105px 0 0 0;
     padding: 64px 0 121px 0;
-    height: 800px;
+    height: 950px;
 }
 .interview .wrapper {
     position: relative;/*more 정렬의 기준*/
@@ -588,6 +588,7 @@ header.fixed .tnb .search::before {
         .interview {
             margin: 53px 0 0 0;
             padding: 36px 0 54px 0;
+            height: auto;
         }
         .interview .tit {
             text-align: left;
