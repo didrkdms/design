@@ -1,6 +1,7 @@
 /*글자의 스타일은 상속받음, 기본글자의 스타일은 모든 탱그를 감싸는 html body에 선언*/
 html, body {
     font-family: 'Pretendard', sans-serif;
+    font-family: 'LG';
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0em; /* 자간 */
@@ -22,20 +23,20 @@ html, body {
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형*/
 @media screen and (max-width:1300px){
     #wrap {
-        min-width: 1300px /*브라우저 넓이에 꽉차게*/
+        min-width: 100%;/*가로스크롤 없애기*/
     }
     .wrapper {
-        /*넓이는 1260px 유지*/
+        width: auto;
         margin: 0 20px;/*좌우에 20px*/
     }
 }/*media*/
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 14px;
+    }
+}
 @media screen and (max-width:640px){/*모바일 반응형*/
     html, body {
         font-size: 13px;
     }
-    #wrap {
-        min-width: 100%;
-    }
-    .wrapper {
-        width: auto;}
 }/*media*/
