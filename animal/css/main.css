@@ -181,7 +181,7 @@ header .tnb .link a {
     border-radius: 17px;
     display: block;
     padding: 6px 0 0 18px;
-    position: relative;//*after 정렬의 기준*/
+    position: relative;/*after 정렬의 기준*/
 }
 header .tnb .link a::after {
     position: absolute;/*a를 기준으로 정렬*/
@@ -197,7 +197,6 @@ header .tnb .link a::after {
 }
 header .tnb .link a:hover {
     background-color: #fff;
-    border-color: none;
     color: #00CDAE;
 }
 header .tnb .link a:hover::after {
