@@ -255,6 +255,7 @@ header.menu_over::before {
     }
     header .gnb .gnb_wrap ul.depth2 {
         background-color: #EDEDED;
+        padding: 20px 15px 20px 20px;
     }
     header .gnb .gnb_wrap ul.depth2 > li > a {
         font-family: 'Pretendard';

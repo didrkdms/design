@@ -109,7 +109,12 @@
     $('header .gnb .gnb_open').on('click', function(){
         if(pc_mobile == 'mobile'){ //pc일 경우에만
             $('header').addClass('mobile_open')
-    }
+    }//if
+})
+    $('header .gnb .gnb_close').on('click', function(){
+        if(pc_mobile == 'mobile'){ //pc일 경우에만
+            $('header').removeClass('mobile_open')
+    }//if
 })
 
 
