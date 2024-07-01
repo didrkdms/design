@@ -108,7 +108,7 @@
     })
     $('header .gnb .gnb_open').on('click', function(){
         if(pc_mobile == 'mobile'){ //pc일 경우에만
-            $('header').removeClass('mobile_open')
+            $('header').addClass('mobile_open')
     }
 })
 
