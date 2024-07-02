@@ -460,9 +460,6 @@ header.menu_over::before {
     text-align: center;
     margin: 0 0 26px 0;
 }
-.find h3 {
-    color: #1d1d1d;
-}
 .find .tab > ul > li .tab_menu {
     font-size: 20px;
     font-weight: 700;
@@ -534,6 +531,7 @@ header.menu_over::before {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #1d1d1d;
 }
 .find .tab .tab_detail ul li a .tit p {
     /*내용이 2줄이지만 <br>태그를 이용하여 줄바꿈을 했으면 1줄로 계산*/
