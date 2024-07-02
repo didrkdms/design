@@ -95,7 +95,6 @@ header .logo a::before {
         }
         header .gnb .gnb_wrap ul.depth2 > li > a {
             display: block;
-            font-family: 'Pretendard';
             color: #fff;
             white-space: nowrap;/*무조건 한줄*/
             line-height: 2.5;
@@ -447,6 +446,37 @@ header.menu_over::before {
         margin: 190px 0 0 0;
     }
 }/*media*/
+
+.find {
+    background-color: #CEE0BE;
+    color: #1d1d1d;
+    padding: 97px 0 80px 0;
+}
+.find h2 {
+    font-size: 45px;
+    font-family: 'LG';
+    font-weight: 700;
+    color: #1d1d1d;
+    text-align: center;
+    margin: 0 0 26px 0;
+}
+.find .tab > ul > li .tab_menu {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 14px 36px;
+}
+.find .tab > ul > li.find1.on .tab_menu {
+    background-color: #1ED769;
+    border-radius: 37px;
+}
+.find .tab > ul > li.find2.on .tab_menu {
+    background-color: #738730;
+    border-radius: 37px;
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+}
+
 footer {
     margin-top: 1000px;
 }
