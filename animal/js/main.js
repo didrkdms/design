@@ -155,9 +155,9 @@
         1. 원래 html애 기본적으로 하나의 li에 on클래스가 있어야함
         jquery에서 클릭하면 on을 다른 li에 주는 것 뿐
     */
-    $('find .tab > ul > li').on('click', function(){
+    $('.find .tab > ul > li').on('click', function(){
         /*모든 li에 있는 on클래스를 모두 지웠다가*/
-        $('find .tab > ul > li').removeClass('on')
+        $('.find .tab > ul > li').removeClass('on')
         /*click한 li에만 다시 on 클래스를 줌*/
         $(this).addClass('on')
     })
