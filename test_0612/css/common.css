@@ -36,5 +36,6 @@ html, body {
         min-width: 100%;
     }
     .wrapper {
-        width: auto;}
+        width: auto;
+    }
 }/*media*/
