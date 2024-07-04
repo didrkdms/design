@@ -180,4 +180,15 @@
         },
 });//swiper
 
+    /*family_site 열고 닫기
+     footer .family_site button.open를 클릭하면 family_site에 on클래스 추가
+     footer .family_site button.close를 클릭하면 family_site에 on클래스 삭제
+     */
+    $('footer .family_site button.open').on('click', function(){
+        $('footer .family_site').addClass('on')
+    })
+    $('footer .family_site button.close').on('click', function(){
+        $('footer .family_site').removeClass('on')
+    })
+
 })/*$(document).ready*/
