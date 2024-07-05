@@ -1189,7 +1189,7 @@ footer .copyright {
     footer .f_nav ul {
         margin: 0 0 19px 0;
         flex-wrap: wrap;/*여러줄 허용*/
-        text-align: center;
+        justify-content: center;
         gap: 0;
     }
     footer .f_nav ul li {
@@ -1267,7 +1267,7 @@ footer .copyright {
         display: block;/*나타남*/
     }
     footer .copyright {
-        margin: 117px 0 0 0;
+        margin: 33px 0 0 0;
         color: rgba(255,255,255,0.6);
     }
 }
