@@ -2,6 +2,7 @@
 @import url(fonts.css);
 @import url(common.css);
 
+
 header {
     position: absolute;/*body를 기준으로 정렬*/
     left: 0;
@@ -103,7 +104,7 @@ header .logo a::before {
         left: 0;
         top: 0;
         width: 100%;
-        height: 271px;
+        height: 300px;
         background-color: #fff;
         content: "";
     }
@@ -180,6 +181,8 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1{
         margin-top: 100px;/*header의 높이만큼*/
+        height: calc(100vh - 100px);/*브라우저의 높이에 상단에 여백값을 뺀 값이 높이*/
+        overflow-y: auto;/*ul내부의 li의 길이가 지정한 높이보다 짧거든 스크롤바를 생성*/
     }
     header .gnb .gnb_wrap ul.depth1 > li {
         border-bottom: 1px solid #2d2d2d;
@@ -202,7 +205,7 @@ header .logo a::before {
         top: 12px;
         width: 24px;
         height: 24px;
-        background-image: url("data:image/svg+xml,%3Csvg width='13' height='7' viewBox='0 0 13 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.49959 6.28855C6.37406 6.28855 6.25722 6.2685 6.14907 6.2284C6.0409 6.18829 5.93804 6.11954 5.84047 6.02215L1.15896 1.34064C1.01486 1.19637 0.941078 1.01503 0.937606 0.796627C0.934307 0.578398 1.00809 0.393762 1.15896 0.242721C1.31 0.0918525 1.49299 0.0164185 1.70792 0.0164185C1.92285 0.0164185 2.10583 0.0918525 2.25688 0.242721L6.49959 4.48569L10.7423 0.242721C10.8866 0.0986234 11.0679 0.0248387 11.2863 0.0213664C11.5045 0.0180678 11.6892 0.0918525 11.8402 0.242721C11.9911 0.393762 12.0665 0.576749 12.0665 0.791679C12.0665 1.00661 11.9911 1.1896 11.8402 1.34064L7.1587 6.02215C7.06113 6.11954 6.95827 6.18829 6.85011 6.2284C6.74195 6.2685 6.62511 6.28855 6.49959 6.28855Z' fill='%231C1B1F'/%3E%3C/svg%3E ");
+        background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_565' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_565)'%3E%3Cpath d='M12.4996 15.2886C12.3741 15.2886 12.2572 15.2685 12.1491 15.2284C12.0409 15.1883 11.938 15.1195 11.8405 15.0221L7.15896 10.3406C7.01486 10.1964 6.94108 10.015 6.93761 9.79663C6.93431 9.5784 7.00809 9.39376 7.15896 9.24272C7.31 9.09185 7.49299 9.01642 7.70792 9.01642C7.92285 9.01642 8.10583 9.09185 8.25688 9.24272L12.4996 13.4857L16.7423 9.24272C16.8866 9.09862 17.0679 9.02484 17.2863 9.02137C17.5045 9.01807 17.6892 9.09185 17.8402 9.24272C17.9911 9.39376 18.0665 9.57675 18.0665 9.79168C18.0665 10.0066 17.9911 10.1896 17.8402 10.3406L13.1587 15.0221C13.0611 15.1195 12.9583 15.1883 12.8501 15.2284C12.7419 15.2685 12.6251 15.2886 12.4996 15.2886Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -212,7 +215,7 @@ header .logo a::before {
         color: #0085FF;
 
     }
-    header .gnb .gnb_wrap ul.depth1 > li > a::after {
+    header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_559' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_559)'%3E%3Cpath d='M12 10.4538L7.92701 14.527C7.78851 14.6653 7.61443 14.7362 7.40476 14.7395C7.19526 14.7427 7.01801 14.6718 6.87301 14.527C6.72818 14.382 6.65576 14.2063 6.65576 14C6.65576 13.7937 6.72818 13.618 6.87301 13.473L11.3673 8.97876C11.5481 8.7981 11.759 8.70776 12 8.70776C12.241 8.70776 12.4519 8.7981 12.6328 8.97876L17.127 13.473C17.2653 13.6115 17.3362 13.7856 17.3395 13.9953C17.3427 14.2048 17.2718 14.382 17.127 14.527C16.982 14.6718 16.8063 14.7443 16.6 14.7443C16.3937 14.7443 16.218 14.6718 16.073 14.527L12 10.4538Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
     }
     header .gnb .gnb_wrap ul.depth2 {
@@ -251,6 +254,7 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1{
         margin-top: 50px;/*header의 높이만큼*/
+        height: calc(100vh - 50px);
     }
 }/*media*/
 
